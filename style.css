@@ -1,0 +1,1226 @@
+/* ==========================================
+   CONFIGURACIÓN GENERAL
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #173b63;
+    background: #f4f8fc;
+    line-height: 1.6;
+}
+
+button,
+a {
+    font-family: inherit;
+}
+
+.contenedor {
+    width: min(1120px, 92%);
+    margin: auto;
+}
+
+
+
+/* ==========================================
+   ENCABEZADO
+========================================== */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(9, 48, 88, 0.97);
+
+    color: white;
+
+    box-shadow: 0 4px 20px rgba(0,0,0,.15);
+}
+
+.nav {
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+
+
+/* MARCA */
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.marca h2 {
+    font-size: 19px;
+    margin-bottom: 0;
+}
+
+.marca span {
+    display: block;
+
+    font-size: 12px;
+
+    opacity: .85;
+}
+
+
+
+/* LOGO FICTICIO */
+
+.logo {
+    position: relative;
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    border-radius: 14px;
+
+    border: 3px solid #7bd6ff;
+
+    color: #0b4f8a;
+
+    font-size: 25px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,.2);
+}
+
+.logo-sol {
+    position: absolute;
+
+    top: -8px;
+    right: -7px;
+
+    font-size: 17px;
+}
+
+
+
+/* MENÚ */
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #82dfff;
+}
+
+
+
+/* BOTÓN MENÚ */
+
+.menu-btn {
+    display: none;
+
+    background: transparent;
+
+    color: white;
+
+    border: 0;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+
+    min-height: 590px;
+
+    display: flex;
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            rgba(6, 46, 82, .72),
+            rgba(7, 52, 91, .72)
+        ),
+        url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.hero-contenido {
+
+    width: min(760px, 92%);
+
+    margin: auto;
+
+    padding: 70px 0;
+}
+
+.etiqueta {
+
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,.18);
+
+    backdrop-filter: blur(8px);
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+
+    font-size: clamp(55px, 9vw, 100px);
+
+    line-height: .95;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 20px;
+}
+
+.hero p {
+
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+.hero .hero-texto {
+
+    max-width: 650px;
+
+    margin: 18px auto 30px;
+
+    font-size: 17px;
+
+    font-weight: normal;
+
+    opacity: .95;
+}
+
+
+
+/* BOTÓN */
+
+.boton-principal {
+
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    background: white;
+
+    color: #095394;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.2);
+
+    transition: .3s;
+}
+
+.boton-principal:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 12px 30px rgba(0,0,0,.3);
+}
+
+
+
+/* ==========================================
+   SECCIONES
+========================================== */
+
+.seccion {
+
+    padding: 85px 0;
+}
+
+.titulo-seccion {
+
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 40px;
+}
+
+.titulo-seccion span {
+
+    color: #1985d1;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.titulo-seccion h2 {
+
+    font-size: 40px;
+
+    color: #123d68;
+
+    margin: 5px 0 10px;
+}
+
+.titulo-seccion p {
+
+    color: #61758a;
+}
+
+
+
+/* ==========================================
+   TARJETAS DE SITUACIONES
+========================================== */
+
+.opciones {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.opcion {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    text-align: left;
+
+    gap: 18px;
+
+    padding: 22px;
+
+    border: 0;
+
+    border-radius: 20px;
+
+    background: white;
+
+    color: #173b63;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 25px rgba(25,70,110,.08);
+
+    transition: .3s;
+
+    min-height: 125px;
+}
+
+.opcion:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 35px rgba(25,70,110,.15);
+}
+
+.opcion .icono {
+
+    min-width: 62px;
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    font-size: 30px;
+
+    background: #eaf5ff;
+}
+
+.opcion h3 {
+
+    font-size: 18px;
+
+    margin-bottom: 3px;
+}
+
+.opcion p {
+
+    color: #71869a;
+
+    font-size: 14px;
+}
+
+.flecha {
+
+    margin-left: auto;
+
+    font-size: 23px;
+
+    color: #1874bc;
+
+    transition: .3s;
+}
+
+.opcion:hover .flecha {
+
+    transform: translateX(5px);
+}
+
+
+
+/* COLORES */
+
+.salud .icono {
+    background: #e6f7ef;
+}
+
+.perdido .icono {
+    background: #fff4d9;
+}
+
+.academico .icono {
+    background: #eee8ff;
+}
+
+.orientacion .icono {
+    background: #e5f5ff;
+}
+
+.acoso {
+    border: 2px solid #ffd2d8;
+}
+
+.acoso .icono {
+    background: #ffe8ec;
+}
+
+.emergencia {
+    border: 2px solid #ffccd2;
+}
+
+.emergencia .icono {
+    background: #ffe8e8;
+}
+
+
+
+/* ==========================================
+   RESULTADO
+========================================== */
+
+.resultado {
+
+    display: none;
+
+    padding: 65px 30px;
+
+    margin-bottom: 50px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 30px;
+
+    box-shadow: 0 15px 45px rgba(20,60,100,.1);
+
+    animation: aparecer .4s ease;
+}
+
+.resultado.mostrar {
+
+    display: block;
+}
+
+.resultado-icono {
+
+    width: 85px;
+    height: 85px;
+
+    margin: auto auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 25px;
+
+    background: #eaf5ff;
+
+    font-size: 42px;
+}
+
+.resultado-etiqueta {
+
+    color: #1680cb;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.resultado h2 {
+
+    font-size: 38px;
+
+    margin: 5px 0 10px;
+
+    color: #103f6b;
+}
+
+.resultado > p {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #64798d;
+}
+
+
+
+/* TARJETAS AYUDA */
+
+.tarjetas-ayuda {
+
+    max-width: 800px;
+
+    margin: 35px auto;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 18px;
+
+    text-align: left;
+}
+
+.tarjeta {
+
+    padding: 25px;
+
+    background: #f4f9fd;
+
+    border-radius: 20px;
+}
+
+.tarjeta h3 {
+
+    margin-bottom: 15px;
+
+    color: #124d80;
+}
+
+.tarjeta ol {
+
+    padding-left: 22px;
+}
+
+.tarjeta li {
+
+    margin-bottom: 9px;
+}
+
+.ubicacion {
+
+    background: #eaf7f1;
+}
+
+.ubicacion p {
+
+    color: #28664d;
+
+    font-weight: bold;
+}
+
+
+
+/* BOTÓN VOLVER */
+
+.boton-volver {
+
+    padding: 13px 23px;
+
+    border: 0;
+
+    border-radius: 50px;
+
+    background: #0b5794;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.boton-volver:hover {
+
+    background: #083d69;
+
+    transform: translateY(-2px);
+}
+
+
+
+/* ==========================================
+   HORARIOS
+========================================== */
+
+.horarios {
+
+    background: #eaf4fb;
+
+    width: 100vw;
+
+    margin-left: calc(50% - 50vw);
+
+    padding-left: max(4%, calc((100vw - 1120px)/2));
+
+    padding-right: max(4%, calc((100vw - 1120px)/2));
+}
+
+.horarios-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.horario-card {
+
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 7px 25px rgba(20,60,100,.07);
+}
+
+.horario-icono {
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e9f4ff;
+
+    border-radius: 15px;
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+.horario-card h3 {
+
+    font-size: 17px;
+
+    margin-bottom: 12px;
+
+    color: #124d80;
+}
+
+.horario-card p {
+
+    font-size: 14px;
+
+    color: #65798b;
+
+    margin-bottom: 5px;
+}
+
+
+
+/* ==========================================
+   INFORMACIÓN
+========================================== */
+
+.info-colegio {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px;
+
+    padding: 85px 0;
+}
+
+.info-texto > span {
+
+    font-size: 12px;
+
+    color: #1881ca;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.info-texto h2 {
+
+    font-size: 38px;
+
+    margin: 5px 0 15px;
+}
+
+.info-texto > p {
+
+    color: #687b8c;
+
+    max-width: 520px;
+
+    margin-bottom: 25px;
+}
+
+.dato {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+    font-size: 25px;
+}
+
+.dato strong {
+
+    font-size: 16px;
+}
+
+.dato p {
+
+    color: #687b8c;
+
+    font-size: 14px;
+}
+
+
+
+/* MAPA FICTICIO */
+
+.mapa-ficticio {
+
+    min-height: 330px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            rgba(230,243,252,.9),
+            rgba(210,234,247,.9)
+        );
+
+    border: 2px dashed #9ccce9;
+}
+
+.pin {
+
+    font-size: 55px;
+
+    margin-bottom: 10px;
+}
+
+.mapa-ficticio h3 {
+
+    color: #124d80;
+}
+
+.mapa-ficticio p {
+
+    color: #667d91;
+
+    margin: 5px 0;
+}
+
+.mapa-ficticio small {
+
+    color: #1881ca;
+
+    font-weight: bold;
+}
+
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+
+    background: #073b6b;
+
+    color: white;
+
+    padding: 35px 0;
+}
+
+.footer-contenido {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 25px;
+
+    align-items: center;
+}
+
+.footer-marca .logo {
+
+    width: 43px;
+    height: 43px;
+
+    font-size: 21px;
+}
+
+.footer-centro {
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+.footer-nota {
+
+    text-align: right;
+
+    font-size: 11px;
+
+    opacity: .75;
+}
+
+
+
+/* ==========================================
+   ANIMACIONES
+========================================== */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+    .horarios-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .footer-contenido {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+    }
+
+    .footer-nota {
+
+        text-align: center;
+
+    }
+
+}
+
+
+
+/* ==========================================
+   CELULAR
+========================================== */
+
+@media (max-width: 700px) {
+
+    body {
+
+        overflow-x: hidden;
+
+    }
+
+
+    /* HEADER */
+
+    .nav {
+
+        min-height: 70px;
+
+    }
+
+    .marca h2 {
+
+        font-size: 15px;
+
+    }
+
+    .marca span {
+
+        font-size: 9px;
+
+    }
+
+    .logo {
+
+        width: 42px;
+        height: 42px;
+
+        font-size: 21px;
+
+        border-radius: 11px;
+
+    }
+
+
+    .menu-btn {
+
+        display: block;
+
+    }
+
+
+    nav {
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+        right: 0;
+
+        display: none;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        background: #073b6b;
+
+        box-shadow: 0 10px 20px rgba(0,0,0,.15);
+
+    }
+
+    nav.abierto {
+
+        display: flex;
+
+    }
+
+    nav a {
+
+        padding: 16px 25px;
+
+        border-top: 1px solid rgba(255,255,255,.1);
+
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        min-height: 560px;
+
+    }
+
+    .hero-contenido {
+
+        padding: 50px 0;
+
+    }
+
+    .hero h1 {
+
+        font-size: 58px;
+
+        letter-spacing: -2px;
+
+    }
+
+    .hero p {
+
+        font-size: 20px;
+
+    }
+
+    .hero .hero-texto {
+
+        font-size: 15px;
+
+    }
+
+
+    /* SECCIONES */
+
+    .seccion {
+
+        padding: 60px 0;
+
+    }
+
+    .titulo-seccion h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    /* SITUACIONES */
+
+    .opciones {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .opcion {
+
+        min-height: 105px;
+
+        padding: 17px;
+
+        border-radius: 17px;
+
+    }
+
+    .opcion .icono {
+
+        min-width: 52px;
+        width: 52px;
+
+        height: 52px;
+
+        font-size: 25px;
+
+        border-radius: 15px;
+
+    }
+
+    .opcion h3 {
+
+        font-size: 16px;
+
+    }
+
+    .opcion p {
+
+        font-size: 12px;
+
+    }
+
+
+    /* RESULTADO */
+
+    .resultado {
+
+        padding: 40px 18px;
+
+        border-radius: 22px;
+
+    }
+
+    .resultado h2 {
+
+        font-size: 29px;
+
+    }
+
+    .tarjetas-ayuda {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* HORARIOS */
+
+    .horarios {
+
+        padding-left: 4%;
+
+        padding-right: 4%;
+
+    }
+
+    .horarios-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* INFORMACIÓN */
+
+    .info-colegio {
+
+        grid-template-columns: 1fr;
+
+        padding: 60px 0;
+
+    }
+
+    .info-texto h2 {
+
+        font-size: 30px;
+
+    }
+
+    .mapa-ficticio {
+
+        min-height: 250px;
+
+    }
+
+
+    /* FOOTER */
+
+    footer {
+
+        padding: 30px 0;
+
+    }
+
+}
+
+
+
+/* ==========================================
+   CELULARES MUY PEQUEÑOS
+========================================== */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+
+        font-size: 48px;
+
+    }
+
+    .hero p {
+
+        font-size: 18px;
+
+    }
+
+    .opcion {
+
+        gap: 11px;
+
+    }
+
+    .opcion .icono {
+
+        min-width: 46px;
+        width: 46px;
+
+        height: 46px;
+
+        font-size: 21px;
+
+    }
+
+    .flecha {
+
+        font-size: 18px;
+
+    }
+
+}

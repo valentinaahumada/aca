@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>¿Qué hago? | Colegio Horizonte Azul</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================
+     ENCABEZADO
+========================= -->
+
+<header class="header">
+
+    <div class="contenedor nav">
+
+        <!-- LOGO FICTICIO -->
+        <div class="marca">
+
+            <div class="logo">
+                <div class="logo-sol">☀</div>
+                <div class="logo-libro">📖</div>
+            </div>
+
+            <div>
+                <h2>Colegio Horizonte Azul</h2>
+                <span>Aprender • Crecer • Ser mejores</span>
+            </div>
+
+        </div>
+
+
+        <!-- BOTÓN MENÚ CELULAR -->
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </button>
+
+
+        <!-- MENÚ -->
+
+        <nav id="menu">
+
+            <a href="#inicio" onclick="cerrarMenu()">Inicio</a>
+
+            <a href="#situaciones" onclick="cerrarMenu()">Situaciones</a>
+
+            <a href="#horarios" onclick="cerrarMenu()">Horarios</a>
+
+            <a href="#contacto" onclick="cerrarMenu()">Contacto</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section id="inicio" class="hero">
+
+    <div class="hero-contenido">
+
+        <div class="etiqueta">
+            💙 Estamos para ayudarte
+        </div>
+
+        <h1>¿QUÉ HAGO?</h1>
+
+        <p>
+            Tu guía rápida cuando no sabes a quién acudir.
+        </p>
+
+        <p class="hero-texto">
+
+            En el Colegio Horizonte Azul queremos que todos
+            los estudiantes sepan dónde encontrar ayuda,
+            orientación e información cuando la necesiten.
+
+        </p>
+
+        <a href="#situaciones" class="boton-principal">
+            Encontrar ayuda →
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SITUACIONES
+========================= -->
+
+<main class="contenedor">
+
+<section id="situaciones" class="seccion">
+
+    <div class="titulo-seccion">
+
+        <span>GUÍA ESTUDIANTIL</span>
+
+        <h2>¿Qué está pasando?</h2>
+
+        <p>
+            Selecciona la situación que estás viviendo
+            y descubre qué puedes hacer.
+        </p>
+
+    </div>
+
+
+    <div class="opciones">
+
+
+        <!-- SALUD -->
+
+        <button class="opcion salud"
+        onclick="mostrarSituacion('salud')">
+
+            <div class="icono">🏥</div>
+
+            <div>
+                <h3>Me siento mal</h3>
+
+                <p>
+                    Necesito ayuda con mi salud.
+                </p>
+            </div>
+
+            <span class="flecha">→</span>
+
+        </button>
+
+
+
+        <!-- OBJETO PERDIDO -->
+
+        <button class="opcion perdido"
+        onclick="mostrarSituacion('perdido')">
+
+            <div class="icono">🎒</div>
+
+            <div>
+                <h3>Perdí algo</h3>
+
+                <p>
+                    No encuentro uno de mis objetos.
+                </p>
+            </div>
+
+            <span class="flecha">→</span>
+
+        </button>
+
+
+
+        <!-- ACADÉMICO -->
+
+        <button class="opcion academico"
+        onclick="mostrarSituacion('academico')">
+
+            <div class="icono">📚</div>
+
+            <div>
+                <h3>Problema académico</h3>
+
+                <p>
+                    Necesito ayuda con una materia.
+                </p>
+            </div>
+
+            <span class="flecha">→</span>
+
+        </button>
+
+
+
+        <!-- ORIENTACIÓN -->
+
+        <button class="opcion orientacion"
+        onclick="mostrarSituacion('orientacion')">
+
+            <div class="icono">🧑‍🏫</div>
+
+            <div>
+                <h3>Necesito orientación</h3>
+
+                <p>
+                    Quiero hablar con alguien.
+                </p>
+            </div>
+
+            <span class="flecha">→</span>
+
+        </button>
+
+
+
+        <!-- ACOSO ESCOLAR -->
+
+        <button class="opcion acoso"
+        onclick="mostrarSituacion('acoso')">
+
+            <div class="icono">💙</div>
+
+            <div>
+                <h3>Estoy viviendo acoso escolar</h3>
+
+                <p>
+                    Necesito ayuda con una situación de acoso.
+                </p>
+            </div>
+
+            <span class="flecha">→</span>
+
+        </button>
+
+
+
+        <!-- EMERGENCIA -->
+
+        <button class="opcion emergencia"
+        onclick="mostrarSituacion('emergencia')">
+
+            <div class="icono">🚨</div>
+
+            <div>
+                <h3>Es una emergencia</h3>
+
+                <p>
+                    Necesito ayuda inmediatamente.
+                </p>
+            </div>
+
+            <span class="flecha">→</span>
+
+        </button>
+
+
+
+        <!-- OTRA -->
+
+        <button class="opcion otra"
+        onclick="mostrarSituacion('otra')">
+
+            <div class="icono">💬</div>
+
+            <div>
+                <h3>Es otra situación</h3>
+
+                <p>
+                    No encuentro mi situación.
+                </p>
+            </div>
+
+            <span class="flecha">→</span>
+
+        </button>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     RESULTADO
+========================= -->
+
+<section id="resultado" class="resultado">
+
+    <div class="resultado-icono" id="iconoResultado">
+        🏥
+    </div>
+
+    <span class="resultado-etiqueta">
+        ORIENTACIÓN
+    </span>
+
+    <h2 id="tituloResultado">
+        Me siento mal
+    </h2>
+
+    <p id="textoResultado">
+        Aquí aparecerá la información.
+    </p>
+
+
+    <div class="tarjetas-ayuda">
+
+        <div class="tarjeta">
+
+            <h3>✅ ¿Qué puedes hacer?</h3>
+
+            <ol id="pasosResultado">
+            </ol>
+
+        </div>
+
+
+        <div class="tarjeta ubicacion">
+
+            <h3>📍 ¿A dónde puedes acudir?</h3>
+
+            <p id="lugarResultado">
+                Enfermería — Bloque B
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <button class="boton-volver"
+    onclick="volverInicio()">
+
+        ← Ver todas las situaciones
+
+    </button>
+
+</section>
+
+
+
+<!-- =========================
+     HORARIOS
+========================= -->
+
+<section id="horarios" class="seccion horarios">
+
+    <div class="titulo-seccion">
+
+        <span>ORGANIZACIÓN</span>
+
+        <h2>Horarios del colegio</h2>
+
+        <p>
+            Consulta los horarios ficticios de atención
+            y actividades del Colegio Horizonte Azul.
+        </p>
+
+    </div>
+
+
+    <div class="horarios-grid">
+
+
+        <div class="horario-card">
+
+            <div class="horario-icono">🕐</div>
+
+            <h3>Lunes a viernes</h3>
+
+            <p>
+                <strong>Entrada:</strong> 6:45 a. m.
+            </p>
+
+            <p>
+                <strong>Salida:</strong> 3:00 p. m.
+            </p>
+
+        </div>
+
+
+        <div class="horario-card">
+
+            <div class="horario-icono">📚</div>
+
+            <h3>Atención académica</h3>
+
+            <p>
+                Lunes a viernes
+            </p>
+
+            <p>
+                7:00 a. m. — 2:30 p. m.
+            </p>
+
+        </div>
+
+
+        <div class="horario-card">
+
+            <div class="horario-icono">💙</div>
+
+            <h3>Orientación</h3>
+
+            <p>
+                Lunes a viernes
+            </p>
+
+            <p>
+                8:00 a. m. — 3:00 p. m.
+            </p>
+
+        </div>
+
+
+        <div class="horario-card">
+
+            <div class="horario-icono">🏥</div>
+
+            <h3>Enfermería</h3>
+
+            <p>
+                Lunes a viernes
+            </p>
+
+            <p>
+                7:00 a. m. — 3:00 p. m.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     INFORMACIÓN DEL COLEGIO
+========================= -->
+
+<section id="contacto" class="info-colegio">
+
+    <div class="info-texto">
+
+        <span>COLEGIO HORIZONTE AZUL</span>
+
+        <h2>¿Dónde estamos?</h2>
+
+        <p>
+            Esta información es ficticia y forma parte
+            del prototipo desarrollado para el proyecto
+            de Digitales.
+        </p>
+
+        <div class="dato">
+            📍
+            <div>
+                <strong>Dirección</strong>
+                <p>
+                    Cra. 12 # 34-56
+                    <br>
+                    Barrio Los Pinos,
+                    Ciudad Esperanza
+                </p>
+            </div>
+        </div>
+
+
+        <div class="dato">
+
+            📞
+
+            <div>
+
+                <strong>Contacto</strong>
+
+                <p>
+                    (601) 555-0123
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="mapa-ficticio">
+
+        <div class="pin">📍</div>
+
+        <h3>Colegio Horizonte Azul</h3>
+
+        <p>
+            Cra. 12 # 34-56
+        </p>
+
+        <small>
+            Ubicación ficticia
+        </small>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     PIE DE PÁGINA
+========================= -->
+
+<footer>
+
+    <div class="contenedor footer-contenido">
+
+        <div>
+
+            <div class="marca footer-marca">
+
+                <div class="logo">
+                    📖
+                </div>
+
+                <div>
+
+                    <strong>
+                        Colegio Horizonte Azul
+                    </strong>
+
+                    <span>
+                        Aprender • Crecer • Ser mejores
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-centro">
+
+            <p>
+                Proyecto de Digitales
+            </p>
+
+            <p>
+                Creado por
+                <strong>Valentina Ahumada</strong>
+            </p>
+
+        </div>
+
+
+        <div class="footer-nota">
+
+            <p>
+                Esta herramienta es una guía informativa
+                y no reemplaza los protocolos oficiales
+                de la institución.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
